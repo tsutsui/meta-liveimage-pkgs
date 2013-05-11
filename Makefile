@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-REVISION=	20130407
+REVISION=	20130511
 DISTNAME=	liveimage-pkgs-${REVISION}
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
@@ -27,6 +27,8 @@ DEPENDS+=	gnash-[0-9]*:../../multimedia/gnash
 # fonts
 DEPENDS+=	vlgothic-ttf-[0-9]*:../../fonts/vlgothic-ttf
 DEPENDS+=	ipafont-[0-9]*:../../fonts/ipafont
+DEPENDS+=	droid-ttf-[0-9]*:../../fonts/droid-ttf
+DEPENDS+=	efont-unicode-[0-9]*:../../fonts/efont-unicode
 
 # terminal emulators
 DEPENDS+=	kterm-[0-9]*:../../x11/kterm
