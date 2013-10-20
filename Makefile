@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-REVISION=	20130511
+REVISION=	20131020
 DISTNAME=	liveimage-pkgs-${REVISION}
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
@@ -30,21 +30,22 @@ DEPENDS+=	ipafont-[0-9]*:../../fonts/ipafont
 DEPENDS+=	droid-ttf-[0-9]*:../../fonts/droid-ttf
 DEPENDS+=	efont-unicode-[0-9]*:../../fonts/efont-unicode
 
-# terminal emulators
-DEPENDS+=	kterm-[0-9]*:../../x11/kterm
-DEPENDS+=	mlterm-[0-9]*:../../x11/mlterm
-
 # window manager
 DEPENDS+=	jwm-[0-9]*:../../wm/jwm
 
 # Japanese input method
-#  ibus
-DEPENDS+=	ibus-[0-9]*:../../inputmethod/ibus
 #  mozc
-DEPENDS+=	ibus-mozc-[0-9]*:../../inputmethod/ibus-mozc
 DEPENDS+=	mozc-server-[0-9]*:../../inputmethod/mozc-server
 DEPENDS+=	mozc-tool-[0-9]*:../../inputmethod/mozc-tool
 DEPENDS+=	mozc-elisp-[0-9]*:../../inputmethod/mozc-elisp
+
+#  ibus
+DEPENDS+=	ibus-[0-9]*:../../inputmethod/ibus
+DEPENDS+=	ibus-mozc-[0-9]*:../../inputmethod/ibus-mozc
+
+# terminal emulators
+DEPENDS+=	kterm-[0-9]*:../../x11/kterm
+DEPENDS+=	mlterm-[0-9]*:../../x11/mlterm
 
 # alsa (for mikutter notification voice)
 DEPENDS+=	alsa-utils-[0-9]*:../../audio/alsa-utils
@@ -54,7 +55,7 @@ DEPENDS+=	alsa-plugins-oss-[0-9]*:../../audio/alsa-plugins-oss
 DEPENDS+=	${RUBY_PKGPREFIX}-mikutter-[0-9]*:../../net/mikutter
 
 # scm (for mikutter plugin github etc)
-DEPENDS+=	scmgit-base-[0-9]*:../../devel/scmgit-base
+DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 # pkgin
 #DEPENDS+=	pkgin-[0-9]*:../../pkgtools/pkgin
