@@ -51,8 +51,9 @@ DEPENDS+=	mlterm-[0-9]*:../../x11/mlterm
 DEPENDS+=	alsa-utils-[0-9]*:../../audio/alsa-utils
 DEPENDS+=	alsa-plugins-oss-[0-9]*:../../audio/alsa-plugins-oss
 
-# mikutter
+# twitter clients
 DEPENDS+=	${RUBY_PKGPREFIX}-mikutter-[0-9]*:../../net/mikutter
+DEPENDS+=	${RUBY_PKGPREFIX}-tw-[0-9]*:../../net/ruby-tw
 
 # scm (for mikutter plugin github etc)
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
