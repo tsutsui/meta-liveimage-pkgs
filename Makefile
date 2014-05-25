@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-REVISION=	20140101
+REVISION=	20140524
 DISTNAME=	liveimage-pkgs-${REVISION}
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
@@ -22,7 +22,6 @@ DEPENDS+=	medit-[0-9]*:../../editors/medit
 # browser and plugin
 DEPENDS+=	firefox-[0-9]*:../../www/firefox
 DEPENDS+=	firefox-l10n-[0-9]*:../../www/firefox-l10n
-DEPENDS+=	gnash-[0-9]*:../../multimedia/gnash
 
 # fonts
 DEPENDS+=	vlgothic-ttf-[0-9]*:../../fonts/vlgothic-ttf
@@ -38,6 +37,8 @@ DEPENDS+=	jwm-[0-9]*:../../wm/jwm
 DEPENDS+=	mozc-server-[0-9]*:../../inputmethod/mozc-server
 DEPENDS+=	mozc-tool-[0-9]*:../../inputmethod/mozc-tool
 DEPENDS+=	mozc-elisp-[0-9]*:../../inputmethod/mozc-elisp
+# mozc is built with GCC_REQD=4.7 so explicitly prepare gcc47-libs too
+DEPENDS+=	gcc47-libs-[0-9]*:../../lang/gcc47-libs
 
 #  ibus
 DEPENDS+=	ibus-[0-9]*:../../inputmethod/ibus
@@ -47,13 +48,10 @@ DEPENDS+=	ibus-mozc-[0-9]*:../../inputmethod/ibus-mozc
 DEPENDS+=	kterm-[0-9]*:../../x11/kterm
 DEPENDS+=	mlterm-[0-9]*:../../x11/mlterm
 
-# alsa (for mikutter notification voice)
-DEPENDS+=	alsa-utils-[0-9]*:../../audio/alsa-utils
-DEPENDS+=	alsa-plugins-oss-[0-9]*:../../audio/alsa-plugins-oss
-
 # twitter clients
 DEPENDS+=	${RUBY_PKGPREFIX}-mikutter-[0-9]*:../../net/mikutter
 DEPENDS+=	${RUBY_PKGPREFIX}-tw-[0-9]*:../../net/ruby-tw
+DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 
 # scm (for mikutter plugin github etc)
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
