@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-REVISION=	20140524
+REVISION=	20141012
 DISTNAME=	liveimage-pkgs-${REVISION}
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
