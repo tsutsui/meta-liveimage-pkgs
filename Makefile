@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-REVISION=	20141012
+REVISION=	20141230
 DISTNAME=	liveimage-pkgs-${REVISION}
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
@@ -40,9 +40,11 @@ DEPENDS+=	mozc-elisp-[0-9]*:../../inputmethod/mozc-elisp
 # mozc is built with GCC_REQD=4.7 so explicitly prepare gcc47-libs too
 DEPENDS+=	gcc47-libs-[0-9]*:../../lang/gcc47-libs
 
-#  ibus
+# ibus
 DEPENDS+=	ibus-[0-9]*:../../inputmethod/ibus
 DEPENDS+=	ibus-mozc-[0-9]*:../../inputmethod/ibus-mozc
+# requred icons by gtk3+
+DEPENDS+=	adwaita-icon-theme-[0-9]*:../../graphics/adwaita-icon-theme
 
 # terminal emulators
 DEPENDS+=	kterm-[0-9]*:../../x11/kterm
@@ -55,6 +57,7 @@ DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 
 # scm (for mikutter plugin github etc)
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
+DEPENDS+=	git-docs-[0-9]*:../../devel/git-docs
 
 # pkgin
 #DEPENDS+=	pkgin-[0-9]*:../../pkgtools/pkgin
