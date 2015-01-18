@@ -28,6 +28,7 @@ DEPENDS+=	vlgothic-ttf-[0-9]*:../../fonts/vlgothic-ttf
 DEPENDS+=	ipafont-[0-9]*:../../fonts/ipafont
 DEPENDS+=	droid-ttf-[0-9]*:../../fonts/droid-ttf
 DEPENDS+=	efont-unicode-[0-9]*:../../fonts/efont-unicode
+DEPENDS+=	freefont-ttf-[0-9]*:../../fonts/freefont-ttf
 
 # window manager
 DEPENDS+=	jwm-[0-9]*:../../wm/jwm
