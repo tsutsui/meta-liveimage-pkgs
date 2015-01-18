@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-REVISION=	20141230
+REVISION=	20150118
 DISTNAME=	liveimage-pkgs-${REVISION}
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
@@ -37,8 +37,8 @@ DEPENDS+=	jwm-[0-9]*:../../wm/jwm
 DEPENDS+=	mozc-server-[0-9]*:../../inputmethod/mozc-server
 DEPENDS+=	mozc-tool-[0-9]*:../../inputmethod/mozc-tool
 DEPENDS+=	mozc-elisp-[0-9]*:../../inputmethod/mozc-elisp
-# mozc is built with GCC_REQD=4.7 so explicitly prepare gcc47-libs too
-DEPENDS+=	gcc47-libs-[0-9]*:../../lang/gcc47-libs
+# mozc is built with GCC_REQD=4.6 so explicitly prepare gcc46-libs too
+DEPENDS+=	gcc46-libs-[0-9]*:../../lang/gcc46-libs
 
 # ibus
 DEPENDS+=	ibus-[0-9]*:../../inputmethod/ibus
