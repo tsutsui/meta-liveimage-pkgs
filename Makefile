@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-REVISION=	20150118
+REVISION=	20150406
 DISTNAME=	liveimage-pkgs-${REVISION}
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
@@ -22,6 +22,7 @@ DEPENDS+=	medit-[0-9]*:../../editors/medit
 # browser and plugin
 DEPENDS+=	firefox-[0-9]*:../../www/firefox
 DEPENDS+=	firefox-l10n-[0-9]*:../../www/firefox-l10n
+DEPENDS+=	w3m-[0-9]*:../../www/w3m
 
 # fonts
 DEPENDS+=	vlgothic-ttf-[0-9]*:../../fonts/vlgothic-ttf
