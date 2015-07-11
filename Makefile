@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-REVISION=	20150406
+REVISION=	20150705
 DISTNAME=	liveimage-pkgs-${REVISION}
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
@@ -9,6 +9,10 @@ DISTFILES=	# empty
 
 MAINTAINER=	tsutsui@NetBSD.org
 COMMENT=	Meta-package to build binaries used in the teokure live image
+
+META_PACKAGE=	yes
+
+.include "../../mk/bsd.prefs.mk"
 
 # shells
 DEPENDS+=	bash-[0-9]*:../../shells/bash
@@ -23,6 +27,10 @@ DEPENDS+=	medit-[0-9]*:../../editors/medit
 DEPENDS+=	firefox-[0-9]*:../../www/firefox
 DEPENDS+=	firefox-l10n-[0-9]*:../../www/firefox-l10n
 DEPENDS+=	w3m-[0-9]*:../../www/w3m
+# firefox is built with GCC_REQD=4.8 so explicitly prepare gcc48-libs too
+.if (${OPSYS} == "NetBSD" && !empty(OS_VERSION:M6.*))
+DEPENDS+=	gcc48-libs-[0-9]*:../../lang/gcc48-libs
+.endif
 
 # fonts
 DEPENDS+=	vlgothic-ttf-[0-9]*:../../fonts/vlgothic-ttf
@@ -39,8 +47,6 @@ DEPENDS+=	jwm-[0-9]*:../../wm/jwm
 DEPENDS+=	mozc-server-[0-9]*:../../inputmethod/mozc-server
 DEPENDS+=	mozc-tool-[0-9]*:../../inputmethod/mozc-tool
 DEPENDS+=	mozc-elisp-[0-9]*:../../inputmethod/mozc-elisp
-# mozc is built with GCC_REQD=4.6 so explicitly prepare gcc46-libs too
-DEPENDS+=	gcc46-libs-[0-9]*:../../lang/gcc46-libs
 
 # ibus
 DEPENDS+=	ibus-[0-9]*:../../inputmethod/ibus
@@ -63,8 +69,6 @@ DEPENDS+=	git-docs-[0-9]*:../../devel/git-docs
 
 # pkgin
 #DEPENDS+=	pkgin-[0-9]*:../../pkgtools/pkgin
-
-META_PACKAGE=	yes
 
 .include "../../lang/ruby/rubyversion.mk"
 .include "../../mk/bsd.pkg.mk"
