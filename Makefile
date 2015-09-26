@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-REVISION=	20150705
+REVISION=	20150926
 DISTNAME=	liveimage-pkgs-${REVISION}
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
@@ -38,6 +38,7 @@ DEPENDS+=	ipafont-[0-9]*:../../fonts/ipafont
 DEPENDS+=	droid-ttf-[0-9]*:../../fonts/droid-ttf
 DEPENDS+=	efont-unicode-[0-9]*:../../fonts/efont-unicode
 DEPENDS+=	freefont-ttf-[0-9]*:../../fonts/freefont-ttf
+DEPENDS+=	unifont-[0-9]*:../../fonts/unifont
 
 # window manager
 DEPENDS+=	jwm-[0-9]*:../../wm/jwm
