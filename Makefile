@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-REVISION=	20151228
+REVISION=	20151229
 DISTNAME=	liveimage-pkgs-${REVISION}
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
@@ -45,6 +45,7 @@ DEPENDS+=	unifont-[0-9]*:../../fonts/unifont
 
 # window manager
 DEPENDS+=	jwm-[0-9]*:../../wm/jwm
+DEPENDS+=	wm-icons-[0-9]*:../../graphics/wm-icons
 
 # Japanese input method
 #  mozc
