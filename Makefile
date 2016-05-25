@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-REVISION=	20160409
+REVISION=	20160525
 DISTNAME=	liveimage-pkgs-${REVISION}
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
@@ -26,9 +26,6 @@ DEPENDS+=	medit-[0-9]*:../../editors/medit
 # browser and plugin
 DEPENDS+=	firefox-[0-9]*:../../www/firefox
 DEPENDS+=	firefox-l10n-[0-9]*:../../www/firefox-l10n
-#  H264 seems to require gst ffmpeg plugin
-DEPENDS+=	gst-plugins1-libav-[0-9]*:../../multimedia/gst-plugins1-libav
-DEPENDS+=	gst-plugins1-good-[0-9]*:../../multimedia/gst-plugins1-good
 DEPENDS+=	w3m-[0-9]*:../../www/w3m
 # firefox is built with GCC_REQD=4.8 so explicitly prepare gcc48-libs too
 .if (${OPSYS} == "NetBSD" && !empty(OS_VERSION:M6.*))
