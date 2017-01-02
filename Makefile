@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-REVISION=	20160525
+REVISION=	20161231
 DISTNAME=	liveimage-pkgs-${REVISION}
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
@@ -31,6 +31,10 @@ DEPENDS+=	w3m-[0-9]*:../../www/w3m
 .if (${OPSYS} == "NetBSD" && !empty(OS_VERSION:M6.*))
 DEPENDS+=	gcc48-libs-[0-9]*:../../lang/gcc48-libs
 .endif
+# firefox 50.x and later uses alsa for audio
+DEPENDS+=	alsa-utils-[0-9]*:../../audio/alsa-utils
+DEPENDS+=	alsa-plugins-oss-[0-9]*:../../audio/alsa-plugins-oss
+DEPENDS+=	alsa-plugins-pulse-[0-9]*:../../audio/alsa-plugins-pulse
 
 # fonts
 DEPENDS+=	vlgothic-ttf-[0-9]*:../../fonts/vlgothic-ttf
