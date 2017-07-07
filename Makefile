@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-REVISION=	20161231
+REVISION=	20170708
 DISTNAME=	liveimage-pkgs-${REVISION}
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
@@ -24,14 +24,13 @@ DEPENDS+=	emacs-[0-9]*:../../editors/emacs
 DEPENDS+=	medit-[0-9]*:../../editors/medit
 
 # browser and plugin
+# XXX pkgsrc use oss for firefox, but alsa is preferred for 7.x based liveimage
+PKG_OPTIONS.firefox=	alsa dbus
 DEPENDS+=	firefox-[0-9]*:../../www/firefox
 DEPENDS+=	firefox-l10n-[0-9]*:../../www/firefox-l10n
 DEPENDS+=	w3m-[0-9]*:../../www/w3m
-# firefox is built with GCC_REQD=4.8 so explicitly prepare gcc48-libs too
-.if (${OPSYS} == "NetBSD" && !empty(OS_VERSION:M6.*))
-DEPENDS+=	gcc48-libs-[0-9]*:../../lang/gcc48-libs
-.endif
-# firefox 50.x and later uses alsa for audio
+# firefox is built with GCC_REQD=4.9 so explicitly prepare gcc49-libs too
+DEPENDS+=	gcc49-libs-[0-9]*:../../lang/gcc49-libs
 DEPENDS+=	alsa-utils-[0-9]*:../../audio/alsa-utils
 DEPENDS+=	alsa-plugins-oss-[0-9]*:../../audio/alsa-plugins-oss
 DEPENDS+=	alsa-plugins-pulse-[0-9]*:../../audio/alsa-plugins-pulse
