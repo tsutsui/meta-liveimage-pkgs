@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-REVISION=	20180421
+REVISION=	20180707
 DISTNAME=	liveimage-pkgs-${REVISION}
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
@@ -29,9 +29,9 @@ PKG_OPTIONS.firefox=	alsa dbus
 DEPENDS+=	firefox-[0-9]*:../../www/firefox
 DEPENDS+=	firefox-l10n-[0-9]*:../../www/firefox-l10n
 DEPENDS+=	w3m-[0-9]*:../../www/w3m
-.if (${OPSYS} == "NetBSD" && !empty(OS_VERSION:M7.*))
-# firefox is built with GCC_REQD=4.9 so explicitly prepare gcc49-libs too
-DEPENDS+=	gcc49-libs-[0-9]*:../../lang/gcc49-libs
+.if (${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[678].*))
+# firefox is built with GCC_REQD=4.9 so explicitly prepare gcc6-libs too
+DEPENDS+=	gcc6-libs-[0-9]*:../../lang/gcc6-libs
 .endif
 DEPENDS+=	alsa-utils-[0-9]*:../../audio/alsa-utils
 DEPENDS+=	alsa-plugins-oss-[0-9]*:../../audio/alsa-plugins-oss
