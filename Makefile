@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-REVISION=	20180707
+REVISION=	20190407
 DISTNAME=	liveimage-pkgs-${REVISION}
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
@@ -73,6 +73,10 @@ DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 # scm (for mikutter plugin github etc)
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 DEPENDS+=	git-docs-[0-9]*:../../devel/git-docs
+
+# tools
+DEPENDS+=	arandr-[0-9]*:../../x11/arandr
+DEPENDS+=	wpa_gui-[0-9]*:../../net/wpa_gui
 
 # pkgin
 #DEPENDS+=	pkgin-[0-9]*:../../pkgtools/pkgin
