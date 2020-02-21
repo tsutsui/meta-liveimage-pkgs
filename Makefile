@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-REVISION=	20190407
+REVISION=	20200221
 DISTNAME=	liveimage-pkgs-${REVISION}
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
@@ -65,14 +65,17 @@ DEPENDS+=	adwaita-icon-theme-[0-9]*:../../graphics/adwaita-icon-theme
 DEPENDS+=	kterm-[0-9]*:../../x11/kterm
 DEPENDS+=	mlterm-[0-9]*:../../x11/mlterm
 
-# twitter clients
+# SNS clients
 DEPENDS+=	${RUBY_PKGPREFIX}-mikutter-[0-9]*:../../net/mikutter
-DEPENDS+=	${RUBY_PKGPREFIX}-tw-[0-9]*:../../net/ruby-tw
-DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
+DEPENDS+=	${RUBY_PKGPREFIX}-mikutter-plugins-twitter-[0-9]*:../../net/mikutter-plugins-twitter
+#DEPENDS+=	${RUBY_PKGPREFIX}-tw-[0-9]*:../../net/ruby-tw
+DEPENDS+=	sayaka-[0-9]*:../../net/sayaka
+DEPENDS+=	nanotodon-[0-9]*:../../net/nanotodon
 
 # scm (for mikutter plugin github etc)
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 DEPENDS+=	git-docs-[0-9]*:../../devel/git-docs
+DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 
 # tools
 DEPENDS+=	arandr-[0-9]*:../../x11/arandr
