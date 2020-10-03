@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-REVISION=	20200221
+REVISION=	20201003
 DISTNAME=	liveimage-pkgs-${REVISION}
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
@@ -44,6 +44,7 @@ DEPENDS+=	droid-ttf-[0-9]*:../../fonts/droid-ttf
 DEPENDS+=	efont-unicode-[0-9]*:../../fonts/efont-unicode
 DEPENDS+=	freefont-ttf-[0-9]*:../../fonts/freefont-ttf
 DEPENDS+=	unifont-[0-9]*:../../fonts/unifont
+DEPENDS+=	twemoji-color-font-ttf-[0-9]*:../../fonts/twemoji-color-font-ttf
 
 # window manager
 DEPENDS+=	jwm-[0-9]*:../../wm/jwm
