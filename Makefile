@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-REVISION=	20201003
+REVISION=	20210226
 DISTNAME=	liveimage-pkgs-${REVISION}
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
