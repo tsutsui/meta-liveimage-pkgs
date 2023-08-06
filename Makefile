@@ -68,6 +68,8 @@ DEPENDS+=	mlterm-[0-9]*:../../x11/mlterm
 DEPENDS+=	${RUBY_PKGPREFIX}-mikutter-[0-9]*:../../net/mikutter
 DEPENDS+=	sayaka-[0-9]*:../../net/sayaka
 DEPENDS+=	nanotodon-[0-9]*:../../net/nanotodon
+# for webp support on mikutter and other gdk-pixbuf tools
+DEPENDS+=	webp-pixbuf-loader-[0-9]*:../../graphics/webp-pixbuf-loader
 
 # scm (for mikutter plugin github etc)
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
