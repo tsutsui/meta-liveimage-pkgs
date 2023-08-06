@@ -66,8 +66,6 @@ DEPENDS+=	mlterm-[0-9]*:../../x11/mlterm
 
 # SNS clients
 DEPENDS+=	${RUBY_PKGPREFIX}-mikutter-[0-9]*:../../net/mikutter
-DEPENDS+=	${RUBY_PKGPREFIX}-mikutter-plugins-twitter-[0-9]*:../../net/mikutter-plugins-twitter
-#DEPENDS+=	${RUBY_PKGPREFIX}-tw-[0-9]*:../../net/ruby-tw
 DEPENDS+=	sayaka-[0-9]*:../../net/sayaka
 DEPENDS+=	nanotodon-[0-9]*:../../net/nanotodon
 
