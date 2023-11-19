@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-REVISION=	20230806
+REVISION=	20231120
 DISTNAME=	liveimage-pkgs-${REVISION}
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
@@ -20,7 +20,7 @@ DEPENDS+=	tcsh-[0-9]*:../../shells/tcsh
 DEPENDS+=	zsh-[0-9]*:../../shells/zsh
 
 # editors
-DEPENDS+=	emacs28-[0-9]*:../../editors/emacs28
+DEPENDS+=	emacs28-[0-9]*:../../editors/emacs
 DEPENDS+=	medit-[0-9]*:../../editors/medit
 
 # browser and plugin
