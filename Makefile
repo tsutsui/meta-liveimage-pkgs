@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-REVISION=	20231120
+REVISION=	20240414
 DISTNAME=	liveimage-pkgs-${REVISION}
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
@@ -50,9 +50,17 @@ DEPENDS+=	wm-icons-[0-9]*:../../graphics/wm-icons
 
 # Japanese input method
 #  mozc
+.if ${MACHINE_ARCH} == "x86_64"
 DEPENDS+=	mozc-server-[0-9]*:../../inputmethod/mozc-server
 DEPENDS+=	mozc-tool-[0-9]*:../../inputmethod/mozc-tool
+DEPENDS+=	mozc-renderer-[0-9]*:../../inputmethod/mozc-renderer
 DEPENDS+=	mozc-elisp-[0-9]*:../../inputmethod/mozc-elisp
+.else
+DEPENDS+=	mozc-server226-[0-9]*:../../inputmethod/mozc-server226
+DEPENDS+=	mozc-tool226-[0-9]*:../../inputmethod/mozc-tool226
+DEPENDS+=	mozc-renderer226-[0-9]*:../../inputmethod/mozc-renderer226
+DEPENDS+=	mozc-elisp226-[0-9]*:../../inputmethod/mozc-elisp226
+.endif
 
 # ibus
 DEPENDS+=	ibus-[0-9]*:../../inputmethod/ibus
@@ -74,7 +82,7 @@ DEPENDS+=	webp-pixbuf-loader-[0-9]*:../../graphics/webp-pixbuf-loader
 # scm (for mikutter plugin github etc)
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 DEPENDS+=	git-docs-[0-9]*:../../devel/git-docs
-DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
+#DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 
 # tools
 DEPENDS+=	arandr-[0-9]*:../../x11/arandr
