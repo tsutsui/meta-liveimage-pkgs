@@ -20,7 +20,7 @@ DEPENDS+=	tcsh-[0-9]*:../../shells/tcsh
 DEPENDS+=	zsh-[0-9]*:../../shells/zsh
 
 # editors
-DEPENDS+=	emacs28-[0-9]*:../../editors/emacs
+DEPENDS+=	emacs-[0-9]*:../../editors/emacs
 DEPENDS+=	medit-[0-9]*:../../editors/medit
 
 # browser and plugin
