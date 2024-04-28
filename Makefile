@@ -56,15 +56,19 @@ DEPENDS+=	mozc-tool-[0-9]*:../../inputmethod/mozc-tool
 DEPENDS+=	mozc-renderer-[0-9]*:../../inputmethod/mozc-renderer
 DEPENDS+=	mozc-elisp-[0-9]*:../../inputmethod/mozc-elisp
 .else
-DEPENDS+=	mozc-server226-[0-9]*:../../inputmethod/mozc-server226
-DEPENDS+=	mozc-tool226-[0-9]*:../../inputmethod/mozc-tool226
-DEPENDS+=	mozc-renderer226-[0-9]*:../../inputmethod/mozc-renderer226
-DEPENDS+=	mozc-elisp226-[0-9]*:../../inputmethod/mozc-elisp226
+DEPENDS+=	mozc-server-[0-9]*:../../inputmethod/mozc-server226
+DEPENDS+=	mozc-tool-[0-9]*:../../inputmethod/mozc-tool226
+DEPENDS+=	mozc-renderer-[0-9]*:../../inputmethod/mozc-renderer226
+DEPENDS+=	mozc-elisp-[0-9]*:../../inputmethod/mozc-elisp226
 .endif
 
 # ibus
 DEPENDS+=	ibus-[0-9]*:../../inputmethod/ibus
+.if ${MACHINE_ARCH} == "x86_64"
 DEPENDS+=	ibus-mozc-[0-9]*:../../inputmethod/ibus-mozc
+.else
+DEPENDS+=	ibus-mozc-[0-9]*:../../inputmethod/ibus-mozc226
+.endif
 # requred icons by gtk3+
 DEPENDS+=	adwaita-icon-theme-[0-9]*:../../graphics/adwaita-icon-theme
 
