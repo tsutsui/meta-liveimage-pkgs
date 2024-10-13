@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-REVISION=	20240414
+REVISION=	20241013
 DISTNAME=	liveimage-pkgs-${REVISION}
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
@@ -46,6 +46,7 @@ DEPENDS+=	twemoji-color-font-ttf-[0-9]*:../../fonts/twemoji-color-font-ttf
 
 # window manager
 DEPENDS+=	jwm-[0-9]*:../../wm/jwm
+DEPENDS+=	tango-icon-theme-[0-9]*:../../graphics/tango-icon-theme
 DEPENDS+=	wm-icons-[0-9]*:../../graphics/wm-icons
 
 # Japanese input method
